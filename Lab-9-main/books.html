@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th><input type="search" placeholder="Search books name" ng-model="search.name" /></th>
+            <th><input type="search" placeholder="Search Language" ng-model="search.language" /></th>
+            </tr>
+            <tr>
+                <th style="color:black;">Books Name</th>
+                <th style="color:black;">Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="books in r_ctrl| filter:search">
+                <td style="color:black;">{{books.name}}</td>
+                <td style="color:black;">{{books.language}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
